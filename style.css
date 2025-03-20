@@ -65,3 +65,52 @@ aside > :last-child,
 	- 640px
 	- 1000px
 */
+
+.kontejner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.obsah {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.reklamy {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 640px) {
+  .clanek {
+    width: 60%;
+  }
+
+  .reklamy {
+    width: 40%;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .menu {
+    width: 25%;
+  }
+
+  .obsah {
+    width: 75%;
+  }
+
+  .clanek, 
+  .reklamy {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .reklama1, 
+  .reklama2 {
+    width: calc(100%/2 - 20px);
+  }
+}
